@@ -1,0 +1,16 @@
+<h1>Daily Diary</h1>
+<a href="/home/new">글 쓰러가기</a>
+
+<br>
+<br>
+
+<% @posts.each do |x| %>
+ <%= x.id %>번 게시물 :<br>
+날짜: <%= x.date %><br>
+내용: <%= x.content %><br>
+
+<a href="/home/show/<%=x.id%>">작성내용</a><br>
+<a href="/home/destroy/<%=x.id%>">지우기</a><br>
+<a href="/home/edit/<%=x.id%>">수정하기</a><br>
+--------------------------<br>
+<%end%>
